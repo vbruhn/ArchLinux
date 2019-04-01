@@ -8,6 +8,8 @@ pacman -S sudo
 nano /etc/sudoers
 gpasswd -a volker wheel
 
+chown -v volker /ArchLinux.git
+
 pacman -S acpid dbus avahi cups cronie
 systemctl enable acpid
 systemctl enable avahi-daemon
