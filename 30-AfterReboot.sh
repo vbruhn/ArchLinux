@@ -1,14 +1,16 @@
 #!/bin/bash
 
+dhcpcd eno1
+
 useradd -m -g users -s /bin/bash volker
 
 passwd volker
 
-pacman -S sudo
+#pacman -S sudo
 nano /etc/sudoers
 gpasswd -a volker wheel
 
-chown -v volker /ArchLinux.git
+chown -v volker /ArchLinux
 
 pacman -S acpid dbus avahi cups cronie
 systemctl enable acpid
@@ -24,8 +26,8 @@ localectl set-x11-keymap de pc105 nodeadkeys
 
 pacman -S ttf-dejavu
 
-pacman -S awesome feh lightdm terminator drun rofi
+pacman -S awesome feh rofi gnome gnome-extra micro-bin
 
-systemctl enable lightdm.service
+systemctl enable gdm
 
 
