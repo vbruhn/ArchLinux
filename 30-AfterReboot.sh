@@ -26,7 +26,7 @@ localectl set-x11-keymap de pc105 nodeadkeys
 
 pacman -S ttf-dejavu
 
-pacman -S awesome feh rofi gnome gnome-extra micro-bin
+pacman -S awesome feh rofi gnome gnome-extra
 
 systemctl enable gdm
 
